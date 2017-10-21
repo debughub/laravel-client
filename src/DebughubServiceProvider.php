@@ -11,13 +11,13 @@ class DebughubServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->config->getEnabled()) {
-            $logger = new Logger($this->config, $this->app);
-            $logger->boot();
-            $this->app->singleton('debughub', function () use($logger) {
-                return $logger;
-            });
-        }
+        // if ($this->config->getEnabled()) {
+        //     $logger = new Logger($this->config, $this->app);
+        //     $logger->boot();
+        //     $this->app->singleton('debughub', function () use($logger) {
+        //         return $logger;
+        //     });
+        // }
     }
     /**
      * Register the application services.
@@ -26,7 +26,7 @@ class DebughubServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->configure();
+        // $this->configure();
     }
     private function configure()
     {
@@ -51,6 +51,10 @@ class DebughubServiceProvider extends ServiceProvider
     public function provides()
     {
         return ['debughub'];
+    }
+
+    public function test(){
+      var_dump(1234);
     }
 
 
