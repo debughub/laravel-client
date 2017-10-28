@@ -3,6 +3,7 @@ namespace Debughub\Clients\Laravel;
 use DB;
 use App;
 use \Debughub\Clients\Php\Config;
+
 class Logger extends \Debughub\Clients\Php\Logger
 {
     private $app;
@@ -17,10 +18,10 @@ class Logger extends \Debughub\Clients\Php\Logger
     {
         if ($this->config->getEnabled()) {
             $this->logHandler = new \Debughub\Clients\Php\Handlers\LogHandler();
-            $this->queryHandler = new LaravelQueryHandler($this->app);
-            $this->exceptionHandler = new LaravelExceptionHandler($this->app);
-            $this->requestHandler = new LaravelRequestHandler($this->config, $this->app);
-            $this->responseHandler = new LaravelResponseHandler($this->config, $this->app);
+            $this->queryHandler = new Handlers\QueryHandler($this->app);
+            $this->exceptionHandler = new Handlers\ExceptionHandler($this->app);
+            $this->requestHandler = new Handlers\RequestHandler($this->config, $this->app);
+            $this->responseHandler = new Handlers\ResponseHandler($this->config, $this->app);
             $this->registerShutdown();
         }
     }
