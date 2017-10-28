@@ -1,5 +1,5 @@
 <?php
-namespace Debughub\Clients\Laravel\Handlers;
+namespace Debughub\Clients\Laravel;
 use Illuminate\Contracts\Foundation\Application;
 class LaravelExceptionHandler extends \Debughub\Clients\Php\Handlers\ExceptionHandler
 {

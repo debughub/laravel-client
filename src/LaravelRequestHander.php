@@ -1,5 +1,5 @@
 <?php
-namespace Debughub\Clients\Laravel\Handlers;
+namespace Debughub\Clients\Laravel;
 use Illuminate\Contracts\Foundation\Application;
 use Debughub\Clients\Php\Config;
 class LaravelRequestHandler extends \Debughub\Clients\Php\Handlers\RequestHandler

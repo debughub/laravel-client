@@ -17,10 +17,10 @@ class Logger extends \Debughub\Clients\Php\Logger
     {
         if ($this->config->getEnabled()) {
             $this->logHandler = new \Debughub\Clients\Php\Handlers\LogHandler();
-            $this->queryHandler = new Handlers\LaravelQueryHandler($this->app);
-            $this->exceptionHandler = new Handlers\LaravelExceptionHandler($this->app);
-            $this->requestHandler = new Handlers\LaravelRequestHandler($this->config, $this->app);
-            $this->responseHandler = new Handlers\LaravelResponseHandler($this->config, $this->app);
+            $this->queryHandler = new LaravelQueryHandler($this->app);
+            $this->exceptionHandler = new LaravelExceptionHandler($this->app);
+            $this->requestHandler = new LaravelRequestHandler($this->config, $this->app);
+            $this->responseHandler = new LaravelResponseHandler($this->config, $this->app);
             $this->registerShutdown();
         }
     }

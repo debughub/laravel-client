@@ -1,5 +1,5 @@
 <?php
-namespace Debughub\Clients\Laravel\Handlers;
+namespace Debughub\Clients\Laravel\;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
@@ -8,7 +8,7 @@ class LaravelResponseHandler extends \Debughub\Clients\Php\Handlers\ResponseHand
 {
     private $app;
     public function __construct(Config $config, Application $app)
-    {
+    
         parent::__construct($config);
         $this->app = $app;
 //        listener for view events
