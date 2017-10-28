@@ -1,7 +1,7 @@
 <?php
-namespace Debughub\LaravelClient\Handlers;
+namespace Debughub\Clients\Laravel\Handlers;
 use Illuminate\Contracts\Foundation\Application;
-class LaravelExceptionHandler extends \Debughub\PhpClient\Handlers\ExceptionHandler
+class LaravelExceptionHandler extends \Debughub\Clients\Php\Handlers\ExceptionHandler
 {
     private $app;
     public function __construct(Application $app)

@@ -1,9 +1,9 @@
 <?php
-namespace Debughub\LaravelClient;
+namespace Debughub\Clients\Laravel;
 use DB;
 use App;
-use \Debughub\PhpClient\Config;
-class Logger extends \Debughub\PhpClient\Logger
+use \Debughub\Clients\Php\Config;
+class Logger extends \Debughub\Clients\Php\Logger
 {
     private $app;
     public function __construct(Config $config, $app)
@@ -16,7 +16,7 @@ class Logger extends \Debughub\PhpClient\Logger
     public function boot()
     {
         if ($this->config->getEnabled()) {
-            $this->logHandler = new \Debughub\PhpClient\Handlers\LogHandler();
+            $this->logHandler = new \Debughub\Clients\Php\Handlers\LogHandler();
             $this->queryHandler = new Handlers\LaravelQueryHandler($this->app);
             $this->exceptionHandler = new Handlers\LaravelExceptionHandler($this->app);
             $this->requestHandler = new Handlers\LaravelRequestHandler($this->config, $this->app);

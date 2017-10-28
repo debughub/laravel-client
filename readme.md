@@ -23,7 +23,7 @@ return [
 ];
 ```
 
-3. Add service provider in your app.php config `Debughub\LaravelClient\DebughubServiceProvider::class`
+3. Add service provider in your app.php config `Debughub\Clients\Laravel\DebughubServiceProvider::class`
 
 From now on debughub client will send request and response info to debughub.com
 

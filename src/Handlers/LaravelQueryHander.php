@@ -1,7 +1,7 @@
 <?php
-namespace Debughub\LaravelClient\Handlers;
+namespace Debughub\Clients\Laravel\Handlers;
 use Illuminate\Contracts\Foundation\Application;
-class LaravelQueryHandler extends \Debughub\PhpClient\Handlers\QueryHandler
+class LaravelQueryHandler extends \Debughub\Clients\Php\Handlers\QueryHandler
 {
     private $app;
     public function __construct(Application $app)

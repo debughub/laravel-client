@@ -1,8 +1,8 @@
 <?php
-namespace Debughub\LaravelClient\Handlers;
+namespace Debughub\Clients\Laravel\Handlers;
 use Illuminate\Contracts\Foundation\Application;
-use Debughub\PhpClient\Config;
-class LaravelRequestHandler extends \Debughub\PhpClient\Handlers\RequestHandler
+use Debughub\Clients\Php\Config;
+class LaravelRequestHandler extends \Debughub\Clients\Php\Handlers\RequestHandler
 {
     public function __construct(Config $config, Application $app)
     {

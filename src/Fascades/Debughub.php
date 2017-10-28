@@ -1,5 +1,5 @@
 <?php
-namespace Debughub\LaravelClient\Facades;
+namespace Debughub\Clients\Laravel\Facades;
 use Illuminate\Support\Facades\Facade;
 class Debughub extends Facade
 {

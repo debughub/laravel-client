@@ -1,6 +1,6 @@
 <?php
 
-namespace Debughub\LaravelClient;
+namespace Debughub\Clients\Laravel;
 
 interface Reportable
 {

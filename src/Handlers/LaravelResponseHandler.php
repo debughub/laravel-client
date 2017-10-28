@@ -1,10 +1,10 @@
 <?php
-namespace Debughub\LaravelClient\Handlers;
+namespace Debughub\Clients\Laravel\Handlers;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
-use Debughub\PhpClient\Config;
-class LaravelResponseHandler extends \Debughub\PhpClient\Handlers\ResponseHandler
+use Debughub\Clients\Php\Config;
+class LaravelResponseHandler extends \Debughub\Clients\Php\Handlers\ResponseHandler
 {
     private $app;
     public function __construct(Config $config, Application $app)

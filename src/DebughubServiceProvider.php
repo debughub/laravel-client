@@ -1,5 +1,5 @@
 <?php
-namespace Debughub\LaravelClient;
+namespace Debughub\Clients\Laravel;
 use Illuminate\Support\ServiceProvider;
 class DebughubServiceProvider extends ServiceProvider
 {
@@ -33,7 +33,7 @@ class DebughubServiceProvider extends ServiceProvider
 
         $config = realpath(__DIR__.'/../config/debughub.php');
         $this->mergeConfigFrom($config, 'debughub');
-        $this->config = new \Debughub\PhpClient\Config();
+        $this->config = new \Debughub\Clients\Php\Config();
         $this->config->setApiKey($this->app->config->get('debughub.api_key'));
         $this->config->setProjectKey($this->app->config->get('debughub.project_key'));
         $this->config->setEndpoint($this->app->config->get('debughub.endpoint'));
