@@ -12,7 +12,8 @@
     },
     "autoload": {
         "psr-4" : {
-            "Debughub\\Clients\\Laravel\\" : "src/"
+          "Debughub\\Clients\\Laravel\\" : "src/",
+          "Debughub\\Clients\\Laravel\\Handlers\\" : "src/"
         }
     }
 }
